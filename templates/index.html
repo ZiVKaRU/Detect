@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Камера</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>🎥 Онлайн-видео</h1>
+    <img src="/video_feed" width="100%">
+
+    <h2>📸 Снимки</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        {% for photo in photos %}
+            <div style="text-align:center;">
+                <img src="/detected_faces/{{ photo }}" width="150"><br>
+                {{ photo }}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
