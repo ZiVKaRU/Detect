@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Камера</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: sans-serif; padding: 1em; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        h2 { margin-top: 2em; }
+        .grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .photo-box {
+            width: 150px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎥 Онлайн-видео</h1>
+    <img src="/video_feed">
+
+    <h2>📸 Снимки</h2>
+    <div class="grid">
+        {% for photo in photos %}
+            <div class="photo-box">
+                <img src="/detected_faces/{{ photo }}" alt="Face">
+                {{ photo }}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
